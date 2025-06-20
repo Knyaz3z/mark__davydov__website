@@ -15,7 +15,7 @@ function Home() {
 function MainHero1About() {
     const handleListText = [
         {
-            hiddenText: 'Основатель клуба111...',
+            hiddenText: 'Основатель клуба...',
             visibleText: 'Основатель клуба Мафии Magnum Mafia',
         },
         {
