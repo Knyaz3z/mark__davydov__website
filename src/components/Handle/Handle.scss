@@ -1,0 +1,77 @@
+.main__about-line {
+  $handle-width: 87px;
+  $handle-height: 40px;
+  $slider-size: 30px;
+  $border-width: 5px;
+  $transition-duration: 0.3s;
+
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  min-height: 60px;
+
+  // Handle (переключатель)
+  &-handle {
+    position: relative;
+    display: flex;
+    min-width: $handle-width;
+    min-height: $handle-height;
+    background-color: #979797;
+    border: $border-width solid #FAFAFA;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color $transition-duration ease;
+
+    // Slider (ползунок)
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: $slider-size;
+      height: $slider-size;
+      background: #3C3C3C;
+      border-radius: 90px;
+      transform: translateY(-50%) translateX(0);
+      transition: transform $transition-duration ease;
+      will-change: transform; // Оптимизация анимации
+    }
+
+    // Open state
+    &.open {
+      background-color: #07E207;
+
+      &:after {
+        $slider-movement: $handle-width - $slider-size - ($border-width * 2);
+        transform: translateY(-50%) translateX($slider-movement);
+      }
+    }
+  }
+
+  // Text container
+  &-text-container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  // Text elements
+  &-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity $transition-duration ease;
+    pointer-events: none; // Чтобы не блокировал клики
+
+    // Visible state
+    &.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}

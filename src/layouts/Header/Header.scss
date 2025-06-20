@@ -1,0 +1,40 @@
+header {
+  font-weight: 300;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em .5em;
+
+  &__list {
+    display: flex;
+    gap: 2em;
+    gap: 40px;
+  }
+
+
+  &__item {
+    transition: .3s all ease;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 2px;
+      background-color: var(--color-accent);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: .3s all ease-in;
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+    &:hover:after {
+      width: 100%;
+    }
+  }
+}

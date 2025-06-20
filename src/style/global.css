@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Moderustic Light";
+    src: url("./fonts/Moderustic-Light.woff2");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Moderustic Regular";
+    src: url("./fonts/Moderustic-Regular.woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Moderustic Medium";
+    src: url("./fonts/Moderustic-Medium.woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Moderustic bold";
+    src: url("./fonts/Moderustic-Bold.woff2");
+    font-weight: 600;
+}
+
+:root{
+    --color-primary: #222222;
+    --color-secondary: #FAFAFA;
+    --color-accent: #9500C5;
+    --color-black: #222222;
+    font-family: "Moderustic", sans-serif;
+    font-weight: 400;
+}
+
+
+html{
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+
+}
+
+.container{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .25em;
+    padding-right: .25em;
+    font-size: 1.25rem;
+
+    @media (max-width: 1094px){
+        font-size: 1rem;
+    }
+}

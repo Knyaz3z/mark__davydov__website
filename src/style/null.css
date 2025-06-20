@@ -1,0 +1,60 @@
+/* reset.css */
+
+/* 1. Обнуляем отступы, паддинги и устанавливаем box-sizing */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Удаляем стандартное оформление списков */
+ul,
+ol,
+li{
+    list-style: none;
+}
+
+/* 3. Обнуляем стили заголовков, параграфов и ссылок */
+h1, h2, h3, h4, h5, h6,
+p, a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 4. Обнуляем стили форм и элементов ввода */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* 5. Обнуляем стили ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 6. Убираем стили таблиц */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 7. Задаём 100% высоту для html и body */
+html,
+body {
+    height: 100%;
+    line-height: 1.5;
+}
+
+/* 8. Курсор по умолчанию для кнопок */
+button {
+    cursor: pointer;
+}
