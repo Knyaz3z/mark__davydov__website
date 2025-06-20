@@ -101,7 +101,7 @@ function MainHero1About() {
 function MainHero2Lines(){
         const connections = [
             {
-                source: "Учись",
+                source: "Учись111",
                 target: "Всегда чему-то новому, достигай новых вершин"
             },
             {
