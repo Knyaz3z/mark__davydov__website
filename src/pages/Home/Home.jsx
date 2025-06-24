@@ -8,6 +8,7 @@ function Home() {
         <main className='main'>
             <MainHero1About/>
             <MainHero2Lines/>
+            <MainHero3Message/>
         </main>
     )
 }
@@ -129,5 +130,26 @@ function MainHero2Lines(){
             </div>
 )
 }
+
+function MainHero3Message() {
+    return (
+        <div className='main__hero3 container'>
+            <img src="/mark__hero3.webp" alt="" className="main__hero3-img"/>
+            <img src="/mark__message__hero3.svg" alt="" className="main__hero3-msg"/>
+        </div>
+    );
+}
+
+function MainHero4Activity() {
+    return (
+        <div>
+
+        </div>
+    );
+}
+
+
+
+
 
 export default Home

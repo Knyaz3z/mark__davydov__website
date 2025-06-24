@@ -100,7 +100,7 @@ $connection-white: #ffffff;
   }
 
 
-  // connection
+  // connection hero2
   .main__box {
     max-width: 800px;
     margin: 2rem auto;
@@ -169,6 +169,13 @@ $connection-white: #ffffff;
         line-height: 1.5;
       }
     }
+  }
+
+  // message hero4
+  .main__hero3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
 }
