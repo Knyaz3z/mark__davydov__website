@@ -1,6 +1,7 @@
 import './Home.scss'
 import Handle from "../../components/Handle/Handle";
 import {useEffect, useState} from "react";
+import ActivityBox from "../../components/ActivityBox/ActivityBox.jsx";
 
 function Home() {
 
@@ -9,6 +10,12 @@ function Home() {
             <MainHero1About/>
             <MainHero2Lines/>
             <MainHero3Message/>
+            <div className="main__activity-container container">
+                <div className="main__activity-text-main left">Деятельность</div>
+                <MainHero4Activity/>
+                <div className="main__activity-text-main right">Деятельность</div>
+            </div>
+
         </main>
     )
 }
@@ -141,9 +148,46 @@ function MainHero3Message() {
 }
 
 function MainHero4Activity() {
+    const ActivityArr =
+        [
+            {
+                title:'Продюсер',
+                link:'/producer_pic.svg',
+                backDescription:'Продюсер телеверсии игры "Потолкуем?" на ТРК "РусскийМир"',
+            },
+            {
+                title:'Создатель',
+                link:'/creator_pic.svg',
+                backDescription:'Создатель интеллектуальной игры на основе мафии: «blackout мафия» ( в кромешной тьме, мафия для слабовидящих), «Бизнес мафия», «Трансформационная мафия», «StandUp Мафия», «Мафия пародий».',
+            },
+            {
+                title:'Ведущий',
+                link:'/hosts_pic.svg',
+                backDescription:'Ведущий мероприятий любого уровня и масштаба. От игр в Мафию и камерных мероприятий, до фестивалей и крупных ивентов',
+            },
+            {
+                title:'Преподаватель',
+                link:'/teacher_pic.svg',
+                backDescription:'Преподователь ',
+            },
+            {
+                title:'Писатель',
+                link:'/writer_pic.svg',
+                backDescription:'Пишу собственные стихи',
+            },
+            {
+                title:'Политолог',
+                link:'/politic_pic.svg',
+                backDescription:'Политолог',
+            },
+        ]
     return (
-        <div>
-
+        <div className='main__activity container'>
+            {
+                ActivityArr.map((item, index) => (
+                    <ActivityBox key={index} title={item.title} link={item.link} backDescription={item.backDescription}/>
+                ))
+            }
         </div>
     );
 }

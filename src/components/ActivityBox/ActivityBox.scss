@@ -1,0 +1,93 @@
+.main__activity-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 0 2em;
+}
+
+.main__activity{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-row-gap: 2em;
+  width: 100%; // Важно для правильного позиционирования
+  margin: 0 auto; // Центрируем grid
+
+  &-text-main {
+    position: absolute;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 3em;
+    letter-spacing: .25em;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+
+    &.left {
+      left: -1em;
+      transform: rotate(180deg);
+      top: 50%;
+      translate: 0 -50%;
+    }
+
+    &.right {
+      right: -1em;
+      transform: rotate(0deg);
+      top: 50%;
+      translate: 0 -50%;
+    }
+  }
+
+  &-card{
+    background-color: rgba(103,103,103,.2);
+    border: 2px solid #9500C5;
+    border-radius: 15px;
+    perspective: 1000px;
+    width: 500px;
+    height: 180px;
+
+
+  }
+
+  &-card:hover &-inner{
+    transform: rotateY(180deg);
+  }
+
+  &-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  &-front, &-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  &-front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+  }
+
+  &-back{
+    text-align: center;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+  }
+
+
+}
+
+
+
