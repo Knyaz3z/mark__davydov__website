@@ -9,8 +9,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   grid-row-gap: 2em;
+  grid-column-gap: 2em;
   width: 100%; // Важно для правильного позиционирования
-  margin: 0 auto; // Центрируем grid
+  margin: 4em auto; // Центрируем grid
 
   &-text-main {
     position: absolute;
@@ -22,6 +23,10 @@
     white-space: nowrap;
     z-index: 10;
     pointer-events: none;
+
+    @media (max-width: 1280px) {
+      display: none;
+    }
 
     &.left {
       left: -1em;
@@ -75,6 +80,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.8em;
+    gap: .5em;
   }
 
   &-back{

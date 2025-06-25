@@ -1,0 +1,18 @@
+.button{
+  //display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  width: 13.55em;
+  min-height: 2.5em;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: .75em;
+}
+
+.button:hover{
+  background-color: var(--color-black);
+  border: 2px solid var(--color-accent);
+}

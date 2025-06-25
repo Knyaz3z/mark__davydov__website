@@ -2,6 +2,7 @@ import './Home.scss'
 import Handle from "../../components/Handle/Handle";
 import {useEffect, useState} from "react";
 import ActivityBox from "../../components/ActivityBox/ActivityBox.jsx";
+import Button from "../../components/Button/Button.jsx";
 
 function Home() {
 
@@ -15,6 +16,7 @@ function Home() {
                 <MainHero4Activity/>
                 <div className="main__activity-text-main right">Деятельность</div>
             </div>
+            <MainHero5Services/>
 
         </main>
     )
@@ -192,8 +194,50 @@ function MainHero4Activity() {
     );
 }
 
+function MainHero5Services() {
+    return (
+        <div>
+            <div className='main__services-head container'>
+                <h3>Услуги</h3>
+                <p>Я готов делиться с вами огромным опытом и расскажу, как не повторять мои ошибки.</p>
+            </div>
+            <div className="main__services">
+                <div className="main__services-item">
+                    <div className="main__services-image-wrapper">
+                        <img src="/main_services_1.webp" alt=""/>
+                    </div>
 
+                    <div className="main__services-content">
+                        <h4>Развитие бизнеса через игры</h4>
+                        <Button title='Хочу подробности'/>
+                    </div>
 
+                </div>
+                <div className="main__services-item">
+                    <div className="main__services-image-wrapper">
+                        <img src="/main_services_2.webp" alt=""/>
+                    </div>
 
+                    <div className="main__services-content">
+                        <h4>Формирование стратегии развития</h4>
+                        <Button title='Хочу подробности'/>
+                    </div>
+
+                </div>
+                <div className="main__services-item">
+                        <div className="main__services-image-wrapper">
+                           <img src="/main_services_3.webp" alt=""/>
+                        </div>
+
+                    <div className="main__services-content">
+                        <h4>Создание философии Вашего бренда</h4>
+                        <Button title='Хочу подробности'/>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    );
+}
 
 export default Home
