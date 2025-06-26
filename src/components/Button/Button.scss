@@ -10,9 +10,21 @@
   font-size: 1em;
   cursor: pointer;
   border-radius: .75em;
+  transition: .3s all ease;
 }
 
 .button:hover{
   background-color: var(--color-black);
-  border: 2px solid var(--color-accent);
+  transform: translateY(-3px);
+}
+
+.button.white{
+  background-color: #FAFAFA;
+  color: #222222;
+  transition: .3s all ease;
+}
+
+.button.white:hover{
+  background-color: #222222;
+  color: #fafafa;
 }

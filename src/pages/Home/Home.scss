@@ -14,6 +14,13 @@ $connection-line-color: rgba(106, 17, 203, 0.3);
 $connection-white: #ffffff;
 
 .main {
+  h3 {
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+    margin: 1em 0 1em 0;
+  }
+
   // About section
   &__about {
     // Section layout
@@ -133,7 +140,7 @@ $connection-white: #ffffff;
       padding: 1rem;
       text-align: center;
       font-size: clamp(1.2rem, 2vw, 1.5rem);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       z-index: 2;
       transition: transform 0.3s ease;
 
@@ -153,7 +160,7 @@ $connection-white: #ffffff;
       background: $connection-white;
       border-radius: 8px;
       padding: 1.2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       border-left: 3px solid $connection-primary-color;
       transition: all 0.3s ease;
 
@@ -172,16 +179,175 @@ $connection-white: #ffffff;
   }
 
   // message hero4
-  .main__hero3{
+  .main__hero3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .main__services{
+  .main__services {
+
+    &-head {
+      text-align: center;
 
 
+    }
 
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    padding: 1em 0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-item {
+      position: relative;
+      width: 100%;
+      margin-bottom: 1.5em;
+
+      @media (min-width: 768px) {
+        width: calc(33.333% - 1em); // Три колонки с отступами
+        margin-bottom: 0;
+      }
+    }
+
+    &-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 17.5em;
+      margin: 0 auto;
+      text-align: center;
+
+      img {
+        border-radius: 15px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    &-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15em;
+
+      @media (max-width: 850px) {
+        gap: 10em;
+      }
+
+      h4 {
+        text-shadow: 4px 4px 5px $shadow-color;
+        font-weight: 400;
+        font-size: clamp(1.2em, 3vw, 1.5em); // Адаптивный размер текста
+        width: 100%;
+        max-width: 350px;
+      }
+    }
   }
 
+  // Адаптация кнопки (если нужно)
+  .button {
+    @media (max-width: 480px) {
+      padding: 0.5em 1em;
+      font-size: 0.9em;
+    }
+  }
+
+
+  .main__cases {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+    &-item.true {
+      background-color: var(--color-accent);
+      max-height: 334px;
+    }
+
+    & h4 {
+      font-size: 1.8em;
+    }
+
+    &-wrapper {
+      display: flex;
+
+      &.img-left {
+        text-align: right;
+        align-self: self-end;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: start;
+
+      &.right {
+        align-items: end;
+      }
+    }
+  }
+
+  .main__mvd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: space-between;
+      gap: 3em;
+      padding: 1em 0;
+
+      &:after{
+        content: '';
+        display: block;
+        width: 70%;
+        height: 2px;
+        color: var(--color-accent);
+        background-color: var(--color-accent);
+        text-align: center;
+        align-self: center;
+      }
+    }
+
+    .main__mvd-title {
+
+      &.left {
+        text-align: left;
+      }
+
+      &.right {
+        text-align: right;
+      }
+    }
+
+    .main__mvd-desc {
+      max-width: 600px;
+      font-family: 'Montserrat Light Italic', sans-serif;
+      font-weight: 300;
+      font-size: .8em;
+      &.left {
+        text-align: left;
+      }
+
+      &.right {
+        text-align: right;
+      }
+    }
+  }
 }

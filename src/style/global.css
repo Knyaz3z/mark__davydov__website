@@ -22,6 +22,12 @@
     font-weight: 600;
 }
 
+@font-face {
+    font-family: "Montserrat Light Italic";
+    src: url("./fonts/Montserrat-LightItalic.woff2");
+    font-weight: 300;
+}
+
 :root{
     --color-primary: #222222;
     --color-secondary: #FAFAFA;
