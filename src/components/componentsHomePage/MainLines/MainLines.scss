@@ -1,17 +1,5 @@
 // Variables
-$breakpoint-lg: 925px;
-$breakpoint-md: 784px;
-$breakpoint-sm: 595px;
-$breakpoint-xs: 587px;
 
-$shadow-color: rgba(192, 0, 255, 1);
-$border-color: #9500C5;
-
-$connection-primary-color: #6a11cb;
-$connection-secondary-color: #2575fc;
-$connection-text-color: #333;
-$connection-line-color: rgba(106, 17, 203, 0.3);
-$connection-white: #ffffff;
 
 .main__box {
   max-width: 800px;
@@ -39,8 +27,8 @@ $connection-white: #ffffff;
 
   // Element: source
   &-source {
-    background: linear-gradient(135deg, $connection-primary-color, $connection-secondary-color);
-    color: $connection-white;
+    background: linear-gradient(135deg, var(--connection-primary-color), var(--connection-secondary-color));
+    color: var(--connection-white);
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
@@ -62,11 +50,11 @@ $connection-white: #ffffff;
 
   // Element: target
   &-target {
-    background: $connection-white;
+    background: var(--connection-white);
     border-radius: 8px;
     padding: 1.2rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border-left: 3px solid $connection-primary-color;
+    border-left: 3px solid var(--connection-primary-color);
     transition: all 0.3s ease;
 
     &:hover {
@@ -76,7 +64,7 @@ $connection-white: #ffffff;
     // Paragraph inside target
     p {
       margin: 0;
-      color: $connection-text-color;
+      color: var(--connection-text-color);
       font-size: clamp(1rem, 2vw, 1.1rem);
       line-height: 1.5;
     }

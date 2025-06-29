@@ -33,8 +33,24 @@
     --color-secondary: #FAFAFA;
     --color-accent: #9500C5;
     --color-black: #222222;
+
+    --breakpoint-lg: 925px;
+    --breakpoint-md: 784px;
+    --breakpoint-sm: 595px;
+    --breakpoint-xs: 587px;
+
+    --shadow-color: rgba(192, 0, 255, 1);
+    --border-color: #9500C5;
+
+    --connection-primary-color: #6a11cb;
+    --connection-secondary-color: #2575fc;
+    --connection-text-color: #333;
+    --connection-line-color: rgba(106, 17, 203, 0.3);
+    --connection-white: #ffffff;
     font-family: "Moderustic", sans-serif;
     font-weight: 400;
+
+
 }
 
 
