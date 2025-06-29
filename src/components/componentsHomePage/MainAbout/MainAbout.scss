@@ -3,7 +3,7 @@
 // About section
 .main__about {
   // Section layout
-  .main__about-section {
+  &-section {
     display: flex;
 
     @media (max-width: var(--breakpoint-lg)) {
@@ -14,7 +14,7 @@
   }
 
   // Image styling
-  .main__about-img {
+  &-img {
     margin-top: -4em;
     margin-right: -5em;
 
@@ -33,7 +33,7 @@
   }
 
   // Typography
-  .main__about p {
+  & p {
     font-size: 1.5em;
 
     @media (max-width: var(--breakpoint-xs)) {
@@ -41,7 +41,7 @@
     }
   }
 
-  .main__about h3 {
+  & h3 {
     text-align: center;
     font-size: clamp(2em, 10vw, 6.4em);
     white-space: nowrap;
@@ -49,14 +49,14 @@
   }
 
   // Handle list
-  .main__about-handle-list {
+  &-handle-list {
     display: flex;
     flex-direction: column;
     gap: 1.25em;
   }
 
   // Text container
-  .main__about-text {
+  &-text {
     max-width: 28.85em;
     border: 2px solid var(--border-color);
     border-radius: 15px;
@@ -68,7 +68,7 @@
   }
 
   // Content layout
-  .main__about-content {
+  &-content {
     display: flex;
     flex-direction: column;
     gap: 2em;
