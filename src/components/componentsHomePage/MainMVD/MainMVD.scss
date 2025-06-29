@@ -1,0 +1,51 @@
+.main__mvd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    gap: 3em;
+    padding: 1em 0;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 70%;
+      height: 2px;
+      color: var(--color-accent);
+      background-color: var(--color-accent);
+      text-align: center;
+      align-self: center;
+    }
+  }
+
+  .main__mvd-title {
+
+    &.left {
+      text-align: left;
+    }
+
+    &.right {
+      text-align: right;
+    }
+  }
+
+  .main__mvd-desc {
+    max-width: 600px;
+    font-family: 'Montserrat Light Italic', sans-serif;
+    font-weight: 300;
+    font-size: .8em;
+
+    &.left {
+      text-align: left;
+    }
+
+    &.right {
+      text-align: right;
+    }
+  }
+}

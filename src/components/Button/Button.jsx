@@ -1,8 +1,8 @@
 import './Button.scss'
 
-function Button({title, type}) {
+function Button({title, type,id}) {
     return (
-        <a className={`button ${type}`}>{title}</a>
+        <a id={id} className={`button ${type}`}>{title}</a>
     )
 }
 

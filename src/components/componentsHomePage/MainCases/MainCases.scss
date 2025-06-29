@@ -1,0 +1,35 @@
+.main__cases {
+
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+
+  &-item.true {
+    background-color: var(--color-accent);
+    max-height: 334px;
+  }
+
+  & h4 {
+    font-size: 1.8em;
+  }
+
+  &-wrapper {
+    display: flex;
+
+    &.img-left {
+      text-align: right;
+      align-self: self-end;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+
+    &.right {
+      align-items: end;
+    }
+  }
+}

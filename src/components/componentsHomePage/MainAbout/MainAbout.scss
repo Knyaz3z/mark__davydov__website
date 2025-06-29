@@ -1,0 +1,98 @@
+$breakpoint-lg: 925px;
+$breakpoint-md: 784px;
+$breakpoint-sm: 595px;
+$breakpoint-xs: 587px;
+
+$shadow-color: rgba(192, 0, 255, 1);
+$border-color: #9500C5;
+
+$connection-primary-color: #6a11cb;
+$connection-secondary-color: #2575fc;
+$connection-text-color: #333;
+$connection-line-color: rgba(106, 17, 203, 0.3);
+$connection-white: #ffffff;
+
+// About section
+.main__about {
+  // Section layout
+  .main__about-section {
+    display: flex;
+
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+    }
+  }
+
+  // Image styling
+  .main__about-img {
+    margin-top: -4em;
+    margin-right: -5em;
+
+    @media (max-width: $breakpoint-lg) {
+      order: -1;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      margin-top: -3em;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      margin-top: -1em;
+      margin-right: 0;
+    }
+  }
+
+  // Typography
+  .main__about p {
+    font-size: 1.5em;
+
+    @media (max-width: $breakpoint-xs) {
+      font-size: 1em;
+    }
+  }
+
+  .main__about h3 {
+    text-align: center;
+    font-size: clamp(2em, 10vw, 6.4em);
+    white-space: nowrap;
+    text-shadow: 4px 4px 4px $shadow-color;
+  }
+
+  // Handle list
+  .main__about-handle-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+  }
+
+  // Text container
+  .main__about-text {
+    max-width: 28.85em;
+    border: 2px solid $border-color;
+    border-radius: 15px;
+    padding: 1.25em 0.75em;
+    @media (max-width: $breakpoint-md) {
+      align-self: center;
+
+    }
+  }
+
+  // Content layout
+  .main__about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+
+    }
+  }
+}

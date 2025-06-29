@@ -16,6 +16,7 @@
 .button:hover{
   background-color: var(--color-black);
   transform: translateY(-3px);
+  border: 1px #555555 solid;
 }
 
 .button.white{
