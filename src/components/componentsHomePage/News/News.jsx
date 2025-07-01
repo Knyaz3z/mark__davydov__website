@@ -1,6 +1,6 @@
 import './News.scss'
 import Button from "../../Button/Button";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 function News() {
     const [currentPosition, setCurrentPosition] = useState(0);
@@ -16,15 +16,41 @@ function News() {
             imgLink: '/vremphoto.png'
         }
     ];
+    const [isPaused, setIsPaused] = useState(false);
+    const timerRef = useRef(null)
+
+    useEffect(() => {
+        if (!isPaused) {
+            timerRef.current = setTimeout(nextSlide, 5000);
+        }
+
+        return () => {
+            clearTimeout(timerRef.current);
+        };
+    }, [currentPosition, isPaused]);
+
     const nextSlide = () => {
         setCurrentPosition(prev => (prev === slides.length - 1 ? 0 : prev + 1));
+        clearTimeout();
     };
-
     const prevSlide = () => {
         setCurrentPosition(prev => (prev === 0 ? slides.length - 1 : prev - 1));
+        clearTimeout();
     };
+    const resetTimer = () => {
+        setIsPaused(true);
+        clearTimeout(timerRef.current);
+
+        // Возобновляем авто-прокрутку через 5 секунд бездействия
+        timerRef.current = setTimeout(() => {
+            setIsPaused(false);
+        }, 5000);
+    };
+
     return (
-        <div className='main__news news__container'>
+        <div onMouseLeave={resetTimer}
+             onMouseEnter={resetTimer}
+             className='main__news news__container'>
             <div
                 className="main__news-slider"
                 style={{transform: `translateX(-${currentPosition * 100}%)`}}
@@ -41,8 +67,16 @@ function News() {
                 }
 
             </div>
-            <img src='/prev-btn.svg' alt="prev" onClick={prevSlide} className="main__news-prev"/>
-            <img src='/next-btn.svg' alt="next" onClick={nextSlide} className="main__news-next"/>
+            <img
+                src='/prev-btn.svg'
+                alt="prev"
+                onClick={prevSlide}
+                className="main__news-prev"/>
+            <img
+                src='/next-btn.svg'
+                alt="next"
+                onClick={nextSlide}
+                className="main__news-next"/>
         </div>
     )
 }

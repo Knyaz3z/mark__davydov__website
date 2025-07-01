@@ -11,6 +11,7 @@ import MainServices from "../../components/componentsHomePage/MainServices/MainS
 import MainCases from "../../components/componentsHomePage/MainCases/MainCases";
 import MainMVD from "../../components/componentsHomePage/MainMVD/MainMVD";
 import News from "../../components/componentsHomePage/News/News";
+import Partners from "../../components/componentsHomePage/Partners/Partners";
 
 function Home() {
 
@@ -35,6 +36,8 @@ function Home() {
             <MainMVD/>
             <h3 className='main__head-info'>Последние новости</h3>
             <News/>
+            <h3 className='main__head-info'>Партнеры и друзья</h3>
+            <Partners/>
         </main>
     )
 }
