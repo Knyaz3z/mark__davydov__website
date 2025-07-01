@@ -10,6 +10,7 @@ import MainActivity from "../../components/componentsHomePage/ActivityBox/MainAc
 import MainServices from "../../components/componentsHomePage/MainServices/MainServices";
 import MainCases from "../../components/componentsHomePage/MainCases/MainCases";
 import MainMVD from "../../components/componentsHomePage/MainMVD/MainMVD";
+import News from "../../components/componentsHomePage/News/News";
 
 function Home() {
 
@@ -23,11 +24,17 @@ function Home() {
                 <MainActivity/>
                 <div className="main__activity-text-main right">Деятельность</div>
             </div>
+            <div className='main__services-head container'>
+                <h3 className='main__head-info'>Услуги</h3>
+                <p>Я готов делиться с вами огромным опытом и расскажу, как не повторять мои ошибки.</p>
+            </div>
             <MainServices/>
-            <h3>Кейсы</h3>
+            <h3 className='main__head-info'>Кейсы</h3>
             <MainCases/>
-            <h3>МВД предупреждает</h3>
+            <h3 className='main__head-info'>МВД предупреждает</h3>
             <MainMVD/>
+            <h3 className='main__head-info'>Последние новости</h3>
+            <News/>
         </main>
     )
 }

@@ -14,11 +14,11 @@ $connection-line-color: rgba(106, 17, 203, 0.3);
 $connection-white: #ffffff;
 
 .main {
-  h3 {
+  &__head-info {
     font-size: 3em;
     font-weight: 600;
     text-align: center;
-    margin: 1em 0 1em 0;
+    margin: 1em 0 .5em 0;
   }
 
 }

@@ -4,10 +4,6 @@ import Button from "../../Button/Button";
 function MainServices() {
     return (
         <div>
-            <div className='main__services-head container'>
-                <h3>Услуги</h3>
-                <p>Я готов делиться с вами огромным опытом и расскажу, как не повторять мои ошибки.</p>
-            </div>
             <div className="main__services container">
                 <div className="main__services-item">
                     <div className="main__services-wrapper">
