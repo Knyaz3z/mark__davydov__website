@@ -12,6 +12,8 @@ import MainCases from "../../components/componentsHomePage/MainCases/MainCases";
 import MainMVD from "../../components/componentsHomePage/MainMVD/MainMVD";
 import News from "../../components/componentsHomePage/News/News";
 import Partners from "../../components/componentsHomePage/Partners/Partners";
+import MainContacts from "../../components/componentsHomePage/MainContacts/MainContacts";
+import Footer from "../../layouts/Footer/Footer";
 
 function Home() {
 
@@ -38,6 +40,8 @@ function Home() {
             <News/>
             <h3 className='main__head-info'>Партнеры и друзья</h3>
             <Partners/>
+            <h3 className='main__head-info'>Контакты</h3>
+            <MainContacts/>
         </main>
     )
 }

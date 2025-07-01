@@ -1,0 +1,22 @@
+.main__contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 7em;
+    row-gap: 2em;
+    font-size: 1.5em;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+}

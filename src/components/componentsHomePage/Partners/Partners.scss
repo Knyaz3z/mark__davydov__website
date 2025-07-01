@@ -1,0 +1,46 @@
+.main__partners {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &-viewport {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &-slider {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% / 4);
+    width: max-content;
+    animation: slideAnimation 15s linear infinite alternate-reverse;
+    
+  }
+
+  &-slide {
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    img {
+      width: 100%;
+      height: 80px;
+      object-fit: contain;
+      display: block;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + (100% / 3)));
+  }
+}
