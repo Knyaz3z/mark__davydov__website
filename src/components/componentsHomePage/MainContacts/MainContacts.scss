@@ -1,5 +1,7 @@
 .main__contacts {
   display: flex;
+  flex-direction: column;
+  gap: 2em;
   justify-content: center;
   align-items: center;
   padding: 3em 0;

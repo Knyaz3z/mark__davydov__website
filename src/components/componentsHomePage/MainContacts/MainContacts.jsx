@@ -1,4 +1,7 @@
 import './MainContacts.scss'
+import Button from "../../Button/Button";
+import Modal from "../../Modal/Modal";
+import {useState} from "react";
 
 function MainContacts() {
     const contacts =
@@ -24,9 +27,13 @@ function MainContacts() {
                 link: '',
             },
         ]
-
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <div className='main__contacts container'>
+            <Modal
+                isModalOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
             <div className="main__contacts-box">
                 {
                     contacts.map((item, index)=>(
@@ -39,6 +46,7 @@ function MainContacts() {
                     ))
                 }
             </div>
+            <Button onclick={()=> setIsModalOpen(true)} type='action' title='Свяжитесь со мной'/>
         </div>
     )
 }

@@ -47,7 +47,7 @@ header {
     transition: 0.3s all ease;
     position: relative;
     color: white;
-    font-size: 1.1em;
+    font-size: .8em;
 
     @media (max-width: 768px) {
       font-size: 1.3em;
@@ -84,7 +84,7 @@ header {
   }
 
   &__line {
-    width: 25px;
+    width: 30px;
     height: 3px;
     background-color: white;
     margin: 5px;

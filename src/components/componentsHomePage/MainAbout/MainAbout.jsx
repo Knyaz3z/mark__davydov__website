@@ -1,6 +1,7 @@
 import './MainAbout.scss'
 import {useEffect, useState} from "react";
 import Handle from "../../Handle/Handle";
+import Modal from "../../Modal/Modal";
 
 function MainAbout() {
     const handleListText = [
@@ -50,8 +51,12 @@ function MainAbout() {
         activateNext(); // Запускаем процесс
     }, []);
 
+
+
     return (
         <div className="main__about container">
+
+
             <h3>МАРК ДАВЫДОВ</h3>
             <p>Кто же я такой?</p>
             <div className="main__about-section">

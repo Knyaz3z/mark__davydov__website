@@ -135,13 +135,10 @@
         transition: transform 0.5s ease;
       }
 
-      &:hover {
-        transform: translateY(-5px) rotateX(5deg);
-
-        img {
+        img:hover {
           transform: scale(1.05);
         }
-      }
+      
     }
   }
 

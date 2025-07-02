@@ -49,3 +49,12 @@
   background-color: #222222;
   color: #fafafa;
 }
+
+.button.action{
+  width: 50%;
+  background-color: rgba(149, 0, 197, 0.3);
+
+  &:hover{
+    background-color: var(--color-black);
+  }
+}
