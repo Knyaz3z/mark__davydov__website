@@ -1,35 +1,112 @@
 .main__cases {
-
   display: flex;
   flex-direction: column;
-  gap: 3em;
+  gap: 2em;
+  padding: 1em;
 
-  &-item.true {
-    background-color: var(--color-accent);
-    max-height: 334px;
+  @media (max-width: 768px) {
+    gap: 1.5em;
+    padding: 0.5em;
+  }
+
+  &-item {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &.true {
+      background-color: var(--color-accent);
+      max-height: none; // Убираем фиксированную высоту
+    }
   }
 
   & h4 {
     font-size: 1.8em;
+    margin-bottom: 0.8em;
+    color: white;
+
+    @media (max-width: 768px) {
+      font-size: 1.5em;
+      text-align: center;
+    }
+  }
+
+  & p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    color: white;
+
+    @media (max-width: 768px) {
+      font-size: 1em;
+      text-align: center;
+    }
   }
 
   &-wrapper {
     display: flex;
+    padding: 2em;
 
-    &.img-left {
-      text-align: right;
-      align-self: self-end;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 1.5em;
+    }
+
+    &.img-left, &.img-right {
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        text-align: center !important;
+      }
     }
   }
 
   &-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: start;
+    justify-content: center;
+    width: 50%;
+    padding: 1em;
 
-    &.right {
-      align-items: end;
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 1em 0;
+      align-items: center !important;
+    }
+
+    .button {
+      align-self: center;
+      margin-top: 1em;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+  }
+
+  &-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 15px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }

@@ -6,8 +6,13 @@ function News() {
     const [currentPosition, setCurrentPosition] = useState(0);
     const slides = [
         {
-            title: 'Марк Давыдов на форуме Будущее 2050',
-            description: 'Уверен, эта информация из первых уст будет полезна всем родителям, да и любому взрослому, который понимает, что через игру он может развивать свои профессиональные навыки',
+            title: 'Форум Будущее 2050',
+            description: 'Уверен, эта информация из первых уст будет полезна всем родителям, да и любому взрослому',
+            imgLink: '/vremphoto.png'
+        },
+        {
+            title: 'КАРТА 2',
+            description: 'Уверен, эта информация из первых уст будет полезна всем родителям...',
             imgLink: '/vremphoto.png'
         },
         {
@@ -37,11 +42,14 @@ function News() {
         setCurrentPosition(prev => (prev === 0 ? slides.length - 1 : prev - 1));
         clearTimeout();
     };
+    const goToSlide = (index) => {
+        setCurrentPosition(index);
+        clearTimeout();
+    };
     const resetTimer = () => {
         setIsPaused(true);
         clearTimeout(timerRef.current);
 
-        // Возобновляем авто-прокрутку через 5 секунд бездействия
         timerRef.current = setTimeout(() => {
             setIsPaused(false);
         }, 5000);
@@ -65,7 +73,6 @@ function News() {
                         />
                     ))
                 }
-
             </div>
             <img
                 src='/prev-btn.svg'
@@ -77,6 +84,16 @@ function News() {
                 alt="next"
                 onClick={nextSlide}
                 className="main__news-next"/>
+
+            <div className="slider-indicators">
+                {slides.map((_, index) => (
+                    <div
+                        key={index}
+                        className={`indicator ${currentPosition === index ? 'active' : ''}`}
+                        onClick={() => goToSlide(index)}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

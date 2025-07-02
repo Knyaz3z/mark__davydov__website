@@ -67,3 +67,4 @@ function ActivityBox({link, title, backDescription}) {
 }
 
 export default MainActivity;
+

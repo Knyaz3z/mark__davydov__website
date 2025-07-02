@@ -6,7 +6,7 @@
   &-section {
     display: flex;
 
-    @media (max-width: var(--breakpoint-lg)) {
+    @media (max-width: 925px) {
       flex-direction: column;
       align-content: center;
       justify-content: center;
@@ -18,15 +18,15 @@
     margin-top: -4em;
     margin-right: -5em;
 
-    @media (max-width: var(--breakpoint-lg)) {
+    @media (max-width: 925px) {
       order: -1;
     }
 
-    @media (max-width: var(--breakpoint-md)) {
+    @media (max-width: 784px) {
       margin-top: -3em;
     }
 
-    @media (max-width: var(--breakpoint-xs)) {
+    @media (max-width: 587px) {
       margin-top: -1em;
       margin-right: 0;
     }
@@ -36,7 +36,7 @@
   & p {
     font-size: 1.5em;
 
-    @media (max-width: var(--breakpoint-xs)) {
+    @media (max-width: 587px) {
       font-size: 1em;
     }
   }
@@ -61,7 +61,7 @@
     border: 2px solid var(--border-color);
     border-radius: 15px;
     padding: 1.25em 0.75em;
-    @media (max-width: var(--breakpoint-md)) {
+    @media (max-width: 784px) {
       align-self: center;
 
     }
@@ -73,12 +73,12 @@
     flex-direction: column;
     gap: 2em;
 
-    @media (max-width: var(--breakpoint-lg)) {
+    @media (max-width: 925px) {
       flex-direction: row;
       justify-content: space-between;
     }
 
-    @media (max-width: var(--breakpoint-md)) {
+    @media (max-width: 784px) {
       flex-direction: column;
 
     }
