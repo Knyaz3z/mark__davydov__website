@@ -10,7 +10,7 @@ import MainActivity from "../../components/componentsHomePage/ActivityBox/MainAc
 import MainServices from "../../components/componentsHomePage/MainServices/MainServices";
 import MainCases from "../../components/componentsHomePage/MainCases/MainCases";
 import MainMVD from "../../components/componentsHomePage/MainMVD/MainMVD";
-import News from "../../components/componentsHomePage/News/News";
+import MainPageNews from "../../components/componentsHomePage/MainPageNews/MainPageNews";
 import Partners from "../../components/componentsHomePage/Partners/Partners";
 import MainContacts from "../../components/componentsHomePage/MainContacts/MainContacts";
 import Footer from "../../layouts/Footer/Footer";
@@ -37,7 +37,7 @@ function Home() {
             <h3 className='main__head-info'>МВД предупреждает</h3>
             <MainMVD/>
             <h3 className='main__head-info'>Последние новости</h3>
-            <News/>
+            <MainPageNews isSlider={true}/>
             <h3 className='main__head-info'>Партнеры и друзья</h3>
             <Partners/>
             <h3 className='main__head-info'>Контакты</h3>

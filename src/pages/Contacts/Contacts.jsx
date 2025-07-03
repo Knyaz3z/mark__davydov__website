@@ -1,10 +1,11 @@
 import './Contacts.scss'
+import MainContacts from "../../components/componentsHomePage/MainContacts/MainContacts";
 
 function Contacts() {
 
     return (
         <div>
-            Contacts
+            <MainContacts/>
         </div>
     )
 }

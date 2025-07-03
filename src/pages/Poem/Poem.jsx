@@ -3,7 +3,7 @@ import './Poem.scss'
 function Poem() {
 
     return (
-        <div>
+        <div className='container'>
             Poem
         </div>
     )

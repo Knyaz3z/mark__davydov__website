@@ -1,10 +1,11 @@
 import './News.scss'
+import MainPageNews from "../../components/componentsHomePage/MainPageNews/MainPageNews";
 
 function News() {
 
     return (
         <div>
-            News
+            <MainPageNews isSlider={false}/>
         </div>
     )
 }
