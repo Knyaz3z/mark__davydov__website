@@ -40,7 +40,7 @@ function Header() {
     return (
         <header className='header'>
             <nav className='nav container'>
-                <img src="/logo.svg" alt="" className="nav__logo"/>
+                <Link to='/'><img src="/logo.svg" alt="" className="nav__logo"/></Link>
                 <div
                     className={`hamburger ${isMenuOpen ? 'active' : ''}`}
                     onClick={toggleMenu}
