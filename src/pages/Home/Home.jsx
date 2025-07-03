@@ -17,7 +17,6 @@ import Footer from "../../layouts/Footer/Footer";
 
 
 function Home() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <main className='main'>
             <MainAbout/>
