@@ -1,6 +1,7 @@
 import './MainPageNews.scss'
 import Button from "../../Button/Button";
 import {useEffect, useRef, useState} from "react";
+import {Link} from "react-router";
 
 function MainPageNews({isSlider}) {
     // const [currentPosition, setCurrentPosition] = useState(0);
@@ -8,17 +9,23 @@ function MainPageNews({isSlider}) {
         {
             title: 'Форум Будущее 2050',
             description: 'Уверен, эта информация из первых уст будет полезна всем родителям, да и любому взрослому',
-            imgLink: '/vremphoto.png'
+            fullDesc:'',
+            imgLink: '/vremphoto.png',
+            id: 'news040725',
         },
         {
             title: 'КАРТА 2',
             description: 'Уверен, эта информация из первых уст будет полезна всем родителям...',
-            imgLink: '/vremphoto.png'
+            fullDesc:'',
+            imgLink: '/vremphoto.png',
+            id: 'news030324',
         },
         {
             title: 'КАРТА 2',
             description: 'Уверен, эта информация из первых уст будет полезна всем родителям...',
-            imgLink: '/vremphoto.png'
+            fullDesc:'',
+            imgLink: '/vremphoto.png',
+            id: 'news010101',
         }
     ];
     const [currentPosition, setCurrentPosition] = useState(0);
@@ -65,6 +72,7 @@ function MainPageNews({isSlider}) {
                             title={slide.title}
                             description={slide.description}
                             imgLink={slide.imgLink}
+                            id={slide.id}
                         />
                     ))
                 }
@@ -99,6 +107,7 @@ function MainPageNews({isSlider}) {
                         title={slide.title}
                         description={slide.description}
                         imgLink={slide.imgLink}
+                        id={slide.id}
                     />
                 ))
             }
@@ -107,7 +116,7 @@ function MainPageNews({isSlider}) {
 
 }
 
-function NewsCard({title, description, imgLink}) {
+function NewsCard({title, description, imgLink, id}) {
 
 
     return (
@@ -118,7 +127,7 @@ function NewsCard({title, description, imgLink}) {
                     <p>
                         {description}
                     </p>
-                    <Button type='white' title='Хочу подробности'/>
+                    <Link to={`/${id}`}><Button type='white' title='Хочу подробности'/></Link>
                 </div>
                 <div className="main__news-inner-img">
                     <img src={imgLink} alt=""/>
