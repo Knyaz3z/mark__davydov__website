@@ -2,8 +2,6 @@
 
   &-head {
     text-align: center;
-
-
   }
 
   display: flex;
@@ -20,10 +18,15 @@
     position: relative;
     width: 100%;
     margin-bottom: 1.5em;
+    transition: .5s all ease;
 
     @media (min-width: 768px) {
       width: calc(33.333% - 1em); // Три колонки с отступами
       margin-bottom: 0;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
     }
   }
 
@@ -62,6 +65,7 @@
     @media (max-width: 850px) {
       gap: 10em;
     }
+
 
     h4 {
       text-shadow: 4px 4px 5px var(--shadow-color);
