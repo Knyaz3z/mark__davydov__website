@@ -74,12 +74,19 @@
     }
 
     .button {
-      align-self: center;
+      align-self: start;
       margin-top: 1em;
 
       @media (max-width: 768px) {
         width: 100%;
         max-width: 250px;
+      }
+    }
+
+    &.right{
+      text-align: end;
+      .button{
+        align-self: end;
       }
     }
   }

@@ -1,5 +1,6 @@
 import './MainCases.scss'
 import Button from "../../Button/Button";
+import {Link} from "react-router";
 
 
 function MainCases() {
@@ -37,7 +38,7 @@ function Case({position, link, title, desc}) {
                         <div className="main__cases-content">
                             <h4>{title}</h4>
                             <p>{desc}</p>
-                            <Button type='white' title='Хочу подробности'/>
+                            <Link to={'/news'}><Button type='white' title='Хочу подробности'/></Link>
                         </div>
                         <div className="main__cases-img">
                             <img src={link} alt=""/>
@@ -51,7 +52,7 @@ function Case({position, link, title, desc}) {
                         <div className="main__cases-content right">
                             <h4>{title}</h4>
                             <p>{desc}</p>
-                            <Button type='white' title='Хочу подробности'/>
+                            <Link to={'/news'}><Button type='white' title='Хочу подробности'/></Link>
                         </div>
                     </div>
                 )

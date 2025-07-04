@@ -1,5 +1,6 @@
 import './MainMVD.scss'
 import Button from "../../Button/Button";
+import {Link} from "react-router";
 
 function MainMVD() {
     return (
@@ -39,7 +40,7 @@ function MainMVD() {
                     -Марк Давыдов
                 </div>
             </div>
-            <Button type='white' title='Читать далее'/>
+            <Link to={'/news'}><Button type='white' title='Читать далее'/></Link>
         </div>
     );
 }

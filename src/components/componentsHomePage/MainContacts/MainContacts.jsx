@@ -9,22 +9,22 @@ function MainContacts() {
             {
                 imgLink: '/phone.svg',
                 content: '+7 (905) 704 4666',
-                link: '',
+                link: 'tel:+79057044666',
             },
             {
                 imgLink: '/mail.svg',
                 content: 'info@markdavydov.ru',
-                link: '',
+                link: 'mailto:Fenix.mark@yandex.ru',
             },
             {
                 imgLink: '/TG.svg',
                 content: '@MarcusgameZ',
-                link: '',
+                link: 'https://t.me/MarcusgameZ',
             },
             {
                 imgLink: '/Tenchat.svg',
                 content: '@marcusgameZ',
-                link: '',
+                link: 'https://tenchat.ru/marcusgameZ',
             },
         ]
     const [isModalOpen, setIsModalOpen] = useState(false);

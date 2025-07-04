@@ -4,7 +4,7 @@ import MainPageNews from "../../components/componentsHomePage/MainPageNews/MainP
 function News() {
 
     return (
-        <div>
+        <div className='news'>
             <MainPageNews isSlider={false}/>
         </div>
     )
