@@ -34,6 +34,21 @@
       flex-direction: column;
       gap: 2em;
 
+      & p{
+        border: red 1px solid;
+        border-radius: 15px;
+        padding: 1em;
+        font-size: .8em;
+        display: none;
+
+      }
+
+      .form__error{
+        &.error-name{display: block;}
+        &.error-email{display: block;}
+        &.error-phone{display: block;}
+      }
+
       & input{
         border-bottom: 1px #bababa solid;
       }
