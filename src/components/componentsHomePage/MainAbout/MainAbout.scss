@@ -2,6 +2,11 @@
 
 // About section
 .main__about {
+
+  h1{
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
   // Section layout
   &-section {
     display: flex;

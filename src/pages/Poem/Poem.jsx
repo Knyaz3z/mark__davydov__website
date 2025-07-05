@@ -85,12 +85,6 @@ function Poem() {
                     'vk.com/id832325894 на XIV Московском международном фестивале искусств в Международном выставочном комплексе ART-SPACE Международный Выставочный Комплекс ART-SPACE'
 
             },
-            {
-                title: '1',
-                link: '2',
-                firstQuatrain: '3',
-                full:'4',
-            },
         ]
     const [expandedPoem, setExpandedPoem] = useState(null);
 
