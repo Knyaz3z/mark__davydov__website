@@ -53,8 +53,9 @@ function MainPageNews({isSlider}) {
                             title={slide.title}
                             description={slide.description}
                             imgLink={slide.imgLink}
+                            videoLink={slide.videoLink}
                             id={slide.id}
-                            fullDescription={slide.fullDescription} // Добавьте это
+                            fullDescription={slide.fullDescription}
                         />
                     ))
                 }
@@ -89,6 +90,7 @@ function MainPageNews({isSlider}) {
                         title={slide.title}
                         description={slide.description}
                         imgLink={slide.imgLink}
+                        videoLink={slide.videoLink}
                         id={slide.id}
                         fullDescription={slide.fullDescription} // Добавьте это
                     />
@@ -99,7 +101,7 @@ function MainPageNews({isSlider}) {
 
 }
 
-function NewsCard({title, description, imgLink, id, fullDescription}) {
+function NewsCard({title, description, imgLink, id}) {
     return (
         <div className="main__news-card">
             <div className="main__news-inner">

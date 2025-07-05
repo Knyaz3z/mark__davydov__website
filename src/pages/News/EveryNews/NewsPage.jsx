@@ -1,6 +1,6 @@
 import './News-item.scss'
 import {useParams} from 'react-router-dom';
-import {Link} from "react-router";
+import { Link } from "react-router-dom";
 import newsData from "../newsData";
 
 function News1() {
@@ -30,6 +30,12 @@ function News1() {
                     <p key={i} className="news-paragraph">{paragraph}</p>
                 ))}
             </div>
+
+            {/*функционал видео добавлю позже*/}
+            
+            {/*<div className='news-video'>*/}
+            {/*    <video controls src='/news/news_video_5.mp4'></video>*/}
+            {/*</div>*/}
 
             <div className="news-footer">
                 <Link to={'/news'}><button className="back-button button white">← Назад к новостям</button></Link>
