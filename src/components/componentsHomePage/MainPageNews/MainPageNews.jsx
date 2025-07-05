@@ -107,14 +107,7 @@ function NewsCard({title, description, imgLink, id, fullDescription}) {
                     <h3>{title}</h3>
                     <p>{description}</p>
                     <Link
-                        to={`/News${id}`}
-                        state={{
-                            title,
-                            description,
-                            imgLink,
-                            fullDescription,
-                            id
-                        }}
+                        to={`/News/${id}`}
                     >
                         <Button type='white' title='Хочу подробности'/>
                     </Link>
