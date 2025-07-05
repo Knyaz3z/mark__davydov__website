@@ -128,8 +128,12 @@ function PoemItem({firstQuatrain, title, link, isExpanded, onExpand, full}) {
                 <div className="poem-text">
                     {
                         isExpanded ? (
-                            full.split('\n').map((line, i) => (
-                                <p key={i}>{line}</p>
+                            full.split('\n\n').map((stanza, stanzaIndex) => (
+                                <div key={stanzaIndex} className="stanza">
+                                    {stanza.split('\n').map((line, lineIndex) => (
+                                        <p key={lineIndex}>{line}</p>
+                                    ))}
+                                </div>
                             ))
                         ) : (
                             firstQuatrain.split('\n').map((line, i) => (

@@ -89,9 +89,13 @@
 }
 
 .poem-text {
-  font-size: 1.1rem;
+  font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
 
   p {
     margin: 0.5rem 0;
@@ -127,5 +131,18 @@
         height: 300px;
       }
     }
+  }
+}
+
+.stanza {
+  margin-bottom: 1.5em;
+
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
